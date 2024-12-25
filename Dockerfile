@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:oracular
 
 # Install curl
 RUN apt-get update && \
@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 # Install KNIME
-RUN curl -k -O https://download.knime.org/analytics-platform/linux/knime-full_3.4.1.linux.gtk.x86_64.tar.gz && \
+RUN curl -k -O https://download.knime.org/analytics-platform/linux/knime-full_5.3.2.linux.gtk.x86_64.tar.gz && \
     tar xvf knime-*.tar.gz && \
     rm -f knime-*.tar.gz && \
     ln -s knime-* knime
