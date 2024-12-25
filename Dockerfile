@@ -1,8 +1,8 @@
-FROM ubuntu:oracular
+FROM debian:bookworm
 
 # Install curl
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl && \
+    apt-get install -y --no-install-recommends curl libx11-6 libfreetype6 fontconfig&& \
     apt-get clean && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
